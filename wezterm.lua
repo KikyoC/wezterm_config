@@ -7,7 +7,7 @@ config = wezterm.config_builder();
 --Basic settings
 config.color_scheme = "Tokyo Night";
 config.font = wezterm.font_with_fallback( {
-	{ family = "BitstromWera Nerd Font", scale = 1.3 }
+	{ family = "CaskaydiaMono Nerd Font", scale = 1.3 }
 });
 config.window_background_opacity = 1;
 config.window_decorations = "RESIZE";
@@ -35,6 +35,20 @@ config.keys = {
 	{ key='o', mods = 'SUPER', action=wezterm.action.SendString '\u{1b}OH'},
 	--{ key=';', mods = 'SUPER', action=wezterm.action.SendString '\u{1b}OF'},
 	--{ key='.', mods = 'SUPER', action=wezterm.action.SendString '\u{15}'}
-}
+};
+
+--Background image
+
+config.background = {
+  {
+    source = {
+      File = 'DarkCat.png',
+    },
+    -- Vous pouvez ajuster l'opacité ici
+    hsb = {
+      brightness = 0.1,
+    },
+  },
+};
 
 return config;
