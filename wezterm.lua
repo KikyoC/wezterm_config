@@ -44,7 +44,6 @@ config.background = {
     source = {
       File = 'DarkCat.png',
     },
-    -- Vous pouvez ajuster l'opacité ici
     hsb = {
       brightness = 0.1,
     },
